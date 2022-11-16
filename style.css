@@ -1,0 +1,167 @@
+*{
+    padding:0;
+    margin:0;
+}
+@font-face {
+    font-family: principal;
+    src: url('font/Roboto-Regular.ttf');
+}
+body{
+    font-family: principal;
+}
+#container{
+    width:50%;
+    min-height:180px;
+    margin:auto;
+    border-radius: 20px;
+    margin-top:70px;
+    box-shadow: 1px 1px 15px 1px rgb(56, 56, 56);
+}
+#container-add{
+    background-color: #6B255f;
+    border-radius: 20px 20px 0 0 ;
+    height:180px;
+    text-align: center;
+}
+#titulo, #add-item{
+    height: 50%;
+    padding: 7px;
+}
+#titulo h1{
+    color:white;
+    text-shadow: 0px 0px 4px rgb(226, 226, 226);
+    font-size: 2rem;
+    margin-top:20px;
+}
+#texto-item{
+    box-shadow: 0px 0px 4px 0.5px rgb(226, 226, 226);
+    width:60%;
+    height:2.1rem;
+    padding:0px 10px;
+    border-radius: 10px;
+    border:transparent;
+}
+#texto-item:focus{
+    outline: none;
+}
+#btn-add-item{
+    background: #35122E;
+    color:white;
+    box-shadow: 0px 0px 4px 1px rgb(226, 226, 226);
+    width:10%;
+    height:2.3rem;
+    margin-left: 5px;
+    border-radius:10px;
+    border:transparent;
+}
+#btn-add-item:hover{
+    transition-duration: 1s;
+    background:#963382;
+    cursor:pointer;
+}
+#container-itens{
+    background-color: #D0E4AE;
+    padding:10px;
+    min-height:100px;
+    border-radius: 0 0 15px 15px;
+}
+ul{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+}
+ul li{
+    margin-bottom: 10px;
+    padding:10px 10px;
+    text-decoration: none;
+    background-color: #194B32;
+    color:white;
+    border-radius: 15px;
+    box-shadow:1px 1px 8px 1px rgb(56, 56, 56);
+}
+ul li.chec{
+    border: 1px solid rgb(0, 226, 0);
+    box-shadow:1px 1px 8px 1px rgb(0, 226, 0);
+    background-color: #2f9763;
+}
+ul li.chec button{
+    color: #194B32;
+}
+button{
+    float: right;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    border: transparent;
+}
+button:hover{
+    color:#37a36d;
+}
+#idt{
+    padding: 10px;
+    margin:auto;
+    position: relative;
+    background-color: #6B255f;
+    width:40%;
+    min-height: 100px;
+    top:40px;
+    border-radius: 20px;
+    display: none;
+
+}
+#container-novo{
+    text-align: center;
+    color:white;
+    text-shadow: 0px 0px 4px rgb(226, 226, 226);
+    margin-bottom: 10px;
+}
+#btn-novo{
+    text-align: center;
+}
+#btn-novo #valorNovo{
+    box-shadow: 0px 0px 4px 0.5px rgb(226, 226, 226);
+    width:80%;
+    height:1.6rem;
+    padding:0px 10px;
+    border-radius: 10px;
+    border:transparent;
+}
+#btn-novo #valorNovo:focus{
+    outline: none;
+}
+#sNovo, #dNovo{
+    margin-top: 10px;
+    color:white;
+    box-shadow: 0px 0px 4px 1px rgb(226, 226, 226);
+    width:30%;
+    height:2rem;
+    margin-left: 5px;
+    border-radius:10px;
+    border:transparent;
+}
+#sNovo{
+    background-color: rgb(66, 202, 66);
+    cursor: pointer;
+}
+#dNovo{
+    background-color: rgb(192, 82, 82);
+    cursor: pointer;
+}
+#sNovo:hover{
+    background-color: rgb(52, 163, 52);
+    transition-duration: 1s;
+}
+#dNovo{
+    background-color: rgb(192, 82, 82);
+    transition-duration: 1s;
+}
+
+@media(width < 800px){
+    #container{
+        width:90%;
+    }
+    #idt{
+        width: 80%;
+    }
+
+}
