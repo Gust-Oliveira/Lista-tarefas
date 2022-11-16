@@ -72,17 +72,26 @@ function novoValor(e){
             idt.style.display = 'block';
 
             s_novo.addEventListener('click', function(){
+
                 arrItens.forEach(function(item2){
                     if(item2.nome === liItem){
                         item2.nome = valor_novo.value
                         item2.complete = false;
                     }
-
                 })
                 //item1.nome = valor_novo.value;
                 criarItemTela();
                 //valor_novo.value;
                 idt.style.display = 'none'
+
+                let li2 = document.getElementsByTagName("li")
+                arrItens.forEach(function(item6, i){
+                    let li1Posicaoi = li2[i];
+                    if(item6.complete === true){
+                        li1Posicaoi.className = 'chec';
+                    }
+                })
+                
             })
 
             d_novo.addEventListener('click',function(){
@@ -93,13 +102,21 @@ function novoValor(e){
 
 // Criar obj e colorcar no arr e chamar a funcão de colocar itens na tela
 function criarItem(){
+
     let li = new Item(texto_item.value)
     arrItens.push(li);
-
+    
     criarItemTela();
 
     texto_item.value = '';
     texto_item.focus();
-    
+
+    let li1 = document.getElementsByTagName("li")
+    arrItens.forEach(function(item5, i){
+        let li1Posicaoi = li1[i];
+        if(item5.complete === true){
+            li1Posicaoi.className = 'chec';
+        }
+    })    
 }
 btn_add_item.addEventListener('click',criarItem);
